@@ -1,2 +1,5 @@
 # astar-node
-for test
+## How to build a node
+
+https://github.com/AstarNetwork/Astar
+
