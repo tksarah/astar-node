@@ -1,0 +1,24 @@
+[Unit]
+Description=Astar Archive node
+
+[Service]
+User=astar
+Group=astar
+
+ExecStart=/usr/local/bin/astar-collator \
+  --pruning=archive \
+  --rpc-cors=all \
+  --name=TEST_NODE \
+  --chain=astar \
+  --base-path=/var/lib/astar \
+  --rpc-external \
+  --rpc-methods=Safe \
+  --rpc-max-request-size=1 \
+  --rpc-max-response-size=1 \
+  --telemetry-url='wss://telemetry.polkadot.io/submit/ 0'
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
